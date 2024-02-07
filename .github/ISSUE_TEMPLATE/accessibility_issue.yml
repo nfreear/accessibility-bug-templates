@@ -15,7 +15,7 @@ body:
     attributes:
       label: Success Criteria
       description: Which WCAG 2.2 Success Criteria does this match? If in doubt, choose, “I don’t know”
-      Multiple: false
+      multiple: false
       options:
         - I don’t know
         - Additional Issue
@@ -56,7 +56,6 @@ body:
         - Cognitive
         - Motor
         - Vision
-  - type: textarea
   - type: textarea
     attributes:
       label: Steps To Reproduce
