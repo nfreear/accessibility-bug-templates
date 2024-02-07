@@ -1,0 +1,70 @@
+name: 🐞 Accessibility Bug
+description: File an accessibility bug/issue
+title: "[BUG] <title>"
+labels: ["Accessibility", "Bug", "Needs Triage"]
+body:
+  - type: checkboxes
+    attributes:
+      label: Is there an existing issue for this?
+      description: Please search to see if an issue already exists for the bug you encountered.
+      options:
+      - label: I have searched the existing issues
+        required: true
+  - type: dropdown
+    id: successCriteria
+    attributes:
+      label: Success Criteria
+      description: Which WCAG 2.2 Success Criteria does this match? If in doubt, choose, “I don’t know”
+      Multiple: false
+      options:
+        - I don’t know
+        - Additional Issue
+        - 1.1.1 Non-text Content (2.0 A)
+        - 1.3.1 Info and Relationships
+        - 2.1.1 Keyboard
+        - 3.1.1 Language of Page
+        - 4.1.2 Name, Role, Value (2.0 A)
+        - 4.1.3 Status Messages (2.1 AA)
+      default: 0
+    validations:
+      required: true
+  - type: dropdown
+    id: devices
+    attributes:
+      label: Devices
+      description:
+      multiple: true
+      options:
+        - Desktop
+        - Mobile (iOS)
+        - Mobile (Android)
+  - type: dropdown
+    id: component
+    attributes:
+      label: Component
+      multiple: true
+      options:
+        - Not applicable
+        - Accordion or disclosure
+  - type: dropdown
+    id: users
+    attributes:
+      label: Users affected
+      multiple: true
+      options:
+        - Auditory
+        - Cognitive
+        - Motor
+        - Vision
+  - type: textarea
+  - type: textarea
+    attributes:
+      label: Steps To Reproduce
+      description: Steps to reproduce the behaviour.
+      placeholder: |
+        1. In this environment...
+        1. With this config...
+        1. Run '...'
+        1. See error...
+    validations:
+      required: false
